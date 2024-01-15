@@ -47,7 +47,13 @@ def make_request(url, file_name):
 def make_request_threading_url():
     threads = []
     for url in urls:
-        thread = threading.Thread(target=make_request, args=(url, "threading_url.txt",))
+        thread = threading.Thread(
+            target=make_request,
+            args=(
+                url,
+                "threading_url.txt",
+            ),
+        )
         threads.append(thread)
         thread.start()
 
@@ -58,7 +64,13 @@ def make_request_threading_url():
 def make_request_processing_url():
     process = []
     for url in urls:
-        proces = Process(target=make_request, args=(url, "multiprocessing_url.txt",))
+        proces = Process(
+            target=make_request,
+            args=(
+                url,
+                "multiprocessing_url.txt",
+            ),
+        )
         process.append(proces)
         proces.start()
 

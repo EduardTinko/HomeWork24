@@ -37,4 +37,3 @@ if __name__ == "__main__":
     time_work2 = end_time2 - start_time2
 
     print(f"Time work threading: {time_work}, time work standart: {time_work2}")
-
